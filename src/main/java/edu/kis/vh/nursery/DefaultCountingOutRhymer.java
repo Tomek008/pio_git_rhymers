@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntArrayStack;
+
 /**
  * Ogólna klasa wyliczanki dostarczająca odpowiednie interfejsy.
  * W swoim działaniu przypomina stos.
@@ -13,11 +15,11 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public void countIn(int in) {
-		arrayStack.countIn(in);
+		arrayStack.push(in);
 	}
 
 	public boolean callCheck() {
-		return arrayStack.callCheck();
+		return arrayStack.isEmpty();
 	}
 
 	public boolean isFull() {
@@ -25,11 +27,11 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public int peekaboo() {
-		return arrayStack.peekaboo();
+		return arrayStack.top();
 	}
 
 	public int countOut() {
-		return arrayStack.countOut();
+		return arrayStack.pop();
 	}
 
 	public DefaultCountingOutRhymer(){ }
