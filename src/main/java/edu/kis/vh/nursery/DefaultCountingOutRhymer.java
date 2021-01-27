@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stack.IntArrayStack;
+import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.IntStack;
 
 /**
  * Ogólna klasa wyliczanki dostarczająca odpowiednie interfejsy.
@@ -8,10 +10,10 @@ import edu.kis.vh.nursery.stack.IntArrayStack;
  */
 public class DefaultCountingOutRhymer {
 
-	IntArrayStack arrayStack = new IntArrayStack();
+	IntStack arrayStack = new IntLinkedList();
 
-	public DefaultCountingOutRhymer(IntArrayStack arrayStack) {
-		this.arrayStack = arrayStack;
+	public DefaultCountingOutRhymer(IntStack intStack) {
+		this.arrayStack = intStack;
 	}
 
 	public void countIn(int in) {
